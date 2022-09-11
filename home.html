@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloath</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <script src="/home.js"></script>
+
+<body>
+    <nav class="akmal">
+        <ul>
+            <li><a href="">HOME</a> </li>
+            <li><a href="">BRANDS</a></li>
+            <li><a href="">COLLECTION</a></li>
+            <input type="search" id="search" Placeholder="Search">
+          <!-- <button action=""> <i class="fas fa-search fa-2x"></i> </button > -->
+            <button action="" id="bu">Search </button>
+        </ul>
+    </nav>
+    <div class="im" style="width:100%; height: 350px; margin-top:110px; padding-left:350px" >
+        <img class="mySlides" src="retro-man-dressed-shirt-lies-floor-posing.jpg" style="width:80% ; height:300px">
+        <img class="mySlides" src="depositphotos_12746841-stock-photo-fashion-man-sitting-and-thinking.jpg" style="width:80% ; height:300px">
+        <img class="mySlides" src="depositphotos_425908912-stock-photo-a-friend-portraits-shot-against.jpg" style="width:80% ; height:300px">
+        <img class="mySlides" src="depositphotos_221963768-stock-photo-handsome-man-isolated-stylish-young.jpg" style="width:80% ; height:300px">
+        <img class="mySlides" src="depositphotos_26043279-stock-photo-retro-fifties-summer-fashion-man.jpg" style="width:80% ; height:300px">
+        <img class="mySlides" src="depositphotos_42354059-stock-photo-man-with-suit-and-watch.jpg" style="width:80% ; height:300px">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 3 seconds
+      }
+      </script>
+      <center><h1><b>ADD YOUR VARIENT</b></h1></center>
+      <table>
+        <tr>
+            <td>
+                <center>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label><b> Brand Name </b></label> <label class="validation-error hide" id="fullNameValidationError">This field is required.</label> <br>
+                        <input type="text" placeholder=" enter brand name" name="fullName" id="brand">
+                    </div> <br>
+                    <div>
+                        <label for=""><b>Color</b></label> <br>
+                        <input type="text" id="emp" placeholder="select your color">
+                        <!-- <label for="selectednames[]"><b>Select Color </b></label> <br>
+                        <select multiple name="selectednames[]" id="emp">
+                            <option value="1">Blue</option>
+                            <option value="2">Black</option>
+                            <option value="3">Green</option>
+                            <option value="4">Red</option>
+                          </select> -->
+                          <!-- <button class="success" onclick="create_tr('table_body')">
+                            <i class="fa fa-plus"></i>
+                          </button> -->
+                    </div> <br>
+                    <div>
+                        <label for=""><b>Size</b></label> <br>
+                        <input type="text" name="" id="size" placeholder="enter your size">
+                        <!-- <label for="selected[]"><b>Size </b></label> <br>
+                        <select multiple name="selected[]" id="size" >
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
+                            <option value="4">Extra Large</option>
+                          </select> -->
+                    </div> <br>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Generate Varient" id="vv">
+                    </div>
+                </form>
+            </center>
+            </td>
+            <td>
+                <center>
+                  <h3>Your varient</h3> <br>
+                <table  id="varient">
+                    
+                    <thead>
+                        <tr>
+                            <th>Brand Name</th>
+                            <th>Color</th>
+                            <th>Size</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+    
+                    </tbody>
+                </table>
+            </center>
+            </td>
+        </tr>
+    </table>
+    <script src="form.js"></script>
+    
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="about">
+              <h6>About</h6>
+              <p class="text-justify"> <i>Our website has a best quality of dress with lots of new collectios with latest trending dress </p>
+            </div>
+  
+            <div class="fo">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Brand</a></li>
+                <!-- <li><a href="#">Collections</a></li> -->
+              </ul>
+            </div>
+  
+            <div class="quick">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <!-- <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+           <a href="#">Scanfcode</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div> -->
+        </div>
+  </footer> 
+</body>
+
+</html>
